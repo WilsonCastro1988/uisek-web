@@ -1,0 +1,100 @@
+<app-header></app-header>
+<div class="alt-padding bg-contact h-100 w-100">
+    <div class="container">
+                <div class="row transparent">
+                        <div class="col-sm-12">
+                                <div class="contact-mf text-light">
+                                        <div class="box-shadow-full">
+                                                <div class="row">
+                                                  <div class="col-md-6">
+                                                    <div class="title-box-2">
+                                                        <h4 class="title-left d-lg-none d-md-none d-block">
+                                                            ¿Necesita ayuda? Contáctenos
+                                                        </h4>
+                                                        <h5 class="title-left">
+                                                          Envianos tu mensaje
+                                                        </h5>
+                                                    </div>
+                                                    <div>
+                                                        <form [formGroup]="emailForm">
+                                                        <div class="row">
+                                                          <div class="col-md-12 mb-3">
+                                                            <div class="form-group">
+                                                              <input type="text" name="name" class="form-control" formControlName="name" placeholder="Ingresa tu nombre" [ngClass]="{ 'is-invalid': submitted && emailForm.controls.name.errors }" />
+                                                              <div *ngIf="submitted && emailForm.controls.name.errors" class="invalid-feedback">
+                                                                <div *ngIf="emailForm.controls.name.errors.required">El usuario es requerido</div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div class="col-md-12 mb-3">
+                                                            <div class="form-group">
+                                                              <input type="email" class="form-control" name="email" formControlName="email" placeholder="Ingresa tu email" [ngClass]="{ 'is-invalid': submitted && emailForm.controls.email.errors }" />
+                                                              <div *ngIf="submitted && emailForm.controls.email.errors" class="invalid-feedback">
+                                                                <div *ngIf="emailForm.controls.email.errors.required">Correo electrónico es requerido</div>
+                                                                <div *ngIf="emailForm.controls.email.errors.email">Debe ser una dirección de correo electrónico válida</div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div class="col-md-12 mb-3">
+                                                              <div class="form-group">
+                                                                <input type="tel" class="form-control" name="tel" formControlName="phone" placeholder="Ingresa tu teléfono" [ngClass]="{ 'is-invalid': submitted && emailForm.controls.phone.errors }"/>
+                                                                <div *ngIf="submitted && emailForm.controls.phone.errors" class="invalid-feedback">
+                                                                  <div *ngIf="emailForm.controls.phone.errors.required">El teléfono es requerida</div>
+                                                                </div>
+                                                              </div>
+                                                          </div>
+                                                          <div class="col-md-12 mb-3">
+                                                            <div class="form-group">
+                                                              <textarea class="form-control" formControlName="message" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensaje"></textarea>
+                                                              <div class="validation"></div>
+                                                            </div>
+                                                          </div>
+                                                          <div class="col-md-12">
+                                                            <button (click)="enviarMail()" class="btn-elect button-a button-big button-rouded">
+                                                                <span *ngIf="submitted === true"><i class="fa fa-spinner fa-spin fa-3x fa-fw" style="font-size: 13px;"></i></span>
+                                                                Enviar
+                                                            </button>
+                                                          </div>
+                                                        </div>
+                                                        </form>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col-md-6 d-none d-md-block d-lg-block">
+                                                    <div class="title-box-2 pt-4 pt-md-0">
+                                                      <h4 class="title-left">
+                                                         ¿Necesita ayuda? Contáctenos
+                                                      </h4>
+                                                    </div>
+                                                    <div class="more-info">
+                                                      <p class="lead">
+                                                        Un equipo de profesionales atiende a sus consultas y le asesora de lunes a viernes, de 10 a 14 y de 15 a 19 horas.
+                                                      </p>
+                                                      <ul class="list-ico">
+                                                        <li><span class="ion-ios-location"></span> Quito 170134</li>
+                                                        <li><span class="ion-ios-telephone"></span> (+593) (02) 397-4800</li>
+                                                        <li><span class="ion-email"></span> admisiones@uisek.edu.ec</li>
+                                                      </ul>
+                                                    </div>
+                                                    <div class="socials">
+                                                      <ul>
+
+                                                        <li>
+                                                            <a href="https://www.facebook.com/UISEKEcuador/" target="_blank">
+                                                              <i class="fab fa-facebook fa-2x fa-fw"></i>
+                                                            </a>
+                                                        <li>
+                                                            <a href="https://www.instagram.com/universidad.sek/" target="_blank">
+                                                              <i class="fab fa-instagram fa-2x fa-fw"></i>
+                                                            </a>
+                                                        </li>
+                                                      </ul>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+    </div>
+</div>
+<app-footer></app-footer>

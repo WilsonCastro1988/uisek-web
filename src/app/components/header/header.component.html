@@ -1,0 +1,97 @@
+<nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top pl-0">
+    <div class="container">
+      <div class="col">
+        <a class="navbar-brand" href="#">
+          <img src="https://4.bp.blogspot.com/-HDgZV99cDNo/UsreyPu-s3I/AAAAAAAAAAM/2-7yishHsPc/s1600/logo_transparente.png" alt="" width="250" class="img-responsive d-inline-block align-middle mt-2">
+        </a>
+      </div>
+      <div class="col">
+        <button class="d-lg-none d-md-block ajuste-center" (click)="open()" type="button" data-toggle="collapse" data-target="#marco" aria-controls="marco" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="toggler-icon">
+              <img [src]="'assets/img/nvarWhite.png'" alt="" width="35" class="cursor-pointer d-inline-block align-middle">
+          </span>
+        </button>
+      </div>
+      <div class="text-upp d-lg-block d-md-none d-none">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link js-scroll active" routerLink="/home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll" routerLink="/about">Sobre nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll" routerLink="/contact">Contáctanos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll" routerLink="/register">Registro</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll" *ngIf="!authService.loggedIn()" routerLink="/login">Login</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link js-scroll" *ngIf="authService.loggedIn()" routerLink="/homeuser">Dashboard</a>
+              </li>
+          </ul>
+      </div>
+    </div>
+</nav>
+<div class="ajusted-position mx-auto d-flex bg-nvar pt-4 animated bounceInRight" *ngIf="isNvar">
+  <div class="col-ajustes" (click)="closed()">
+      <img [src]="'assets/img/nvarWhiteX.png'" alt="x"  width="35" class="cursor-pointer ajustes-img">
+  </div>
+  <div class="col-12">
+    <div class="container">
+        <ul class="fg-20 text-center pl-0">
+          <li class="nav-item">
+              <a class="" href="#home">
+                <span class="">Home</span>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="" routerLink="/contact">
+                <span class="">Sobre Nosotros</span>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a routerLink="/terms">
+                <span class="">Contáctanos</span>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="" routerLink="/register">
+                <span class="">Registo</span>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="" routerLink="/login">
+                <span class="">Login</span>
+              </a>
+          </li>
+        </ul>
+    </div>
+    <div class="text-center mobile-social-links">
+        <a href="https://www.facebook.com/UISEKEcuador/" target="_blank" title="Facebook">
+            <i class="fab fa-facebook fa-2x fa-fw"></i>
+        </a>
+        <a href="https://www.instagram.com/universidad.sek/" target="_blank" title="Instagram">
+            <i class="fab fa-instagram fa-2x fa-fw"></i>
+        </a>
+    </div>
+    <div class="text-light text-center mt-4">
+          <p class="address">
+            <strong>Uisek</strong>
+            <br>
+            Quito 170134
+          </p>
+          <p>
+            <strong>(+593) (02) 397-4800</strong>
+          </p>
+          <p>
+            <strong>
+              <a>admisiones@uisek.edu.ec</a>
+            </strong>
+          </p>
+    </div>
+  </div>
+</div>

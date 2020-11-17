@@ -1,0 +1,47 @@
+.jumbotron{
+    background-color: rgba(255, 255, 255, 0.8196078431372549);
+}
+.bg-about{
+    background-image: url("https://www.uisek.edu.ec/media/1135/institucion_sek.jpg?anchor=center&mode=crop&width=1140&height=550&rnd=131019176370000000");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    padding-top: 7.5rem !important;
+}
+.small-sm {
+    font-size: 13px;
+    line-height: 24px;
+}
+.about-list {
+    list-style-type: none;
+    position: relative;
+    float: left;
+}
+.fl {
+    float: left;
+    width: 100%;
+}
+.btn-wrap {
+    position: relative;
+    display: inline-block;
+}
+.h0-md {
+    height: 0px;
+}
+.h50-xs {
+    height: 50px;
+}
+.h60-md {
+    height: 60px;
+}
+.h30-xs {
+    height: 30px;
+}
+.h20-xs {
+    height: 20px;
+}
+.empty-space {
+    position: relative;
+    display: block;
+}

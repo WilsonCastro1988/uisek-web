@@ -1,0 +1,16 @@
+footer{
+    background: #0b174a;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+    color: white;
+}
+a {
+    color: white !important;
+    text-decoration: none;
+    background-color: transparent;
+}
+.text-upp{
+    text-transform: uppercase;
+    font-size: 14px;
+}

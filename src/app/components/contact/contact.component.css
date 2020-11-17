@@ -1,0 +1,72 @@
+.bg-contact{
+  background-image: url(/assets/img/contactenos.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.transparent{
+  background: rgba(255, 255, 255, 0.08);
+  padding: 10px;
+}
+
+.btn-elect{
+  background: #0b174a;
+  border-color: #0b174a;
+  color: white;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+.alt-padding{
+  padding-top: 15%;
+}
+
+.socials {
+  padding: 1.5rem 0;
+}
+.socials ul li {
+  display: inline-block;
+}
+
+.socials ul li a{
+  color: white;
+}
+
+.socials .ico-circle {
+  height: 40px;
+  width: 40px;
+  font-size: 1.7rem;
+  line-height: 1.4;
+  margin: 0 15px 0 0;
+  transition: all 500ms ease;
+}
+
+.ul-resect, .socials ul, .list-ico, .blog-wrapper .post-meta ul, .box-comments .list-comments, .widget-sidebar .list-sidebar, .widget-tags ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+/* Tablet Device : 768px */
+@media only screen and (min-width: 280px) and (max-width: 991px) {
+  .btn-elect{
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+  }
+  .alt-padding{
+    padding-top: 0;
+  }
+	.transparent{
+    max-width: 1200px;
+    transform: translate(0px, 30%);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 70vh;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 10px;
+  }
+}
